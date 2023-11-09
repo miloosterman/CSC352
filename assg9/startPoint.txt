@@ -1,0 +1,5 @@
+Going to be using system in program to call the commands in makefile i.e system("gcc -Wall blah.c")
+
+Need to use stat, specifically struct timespec to get times
+
+Will also use getrusage - give procesor info

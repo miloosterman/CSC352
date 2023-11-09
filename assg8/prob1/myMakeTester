@@ -1,0 +1,14 @@
+#!/bin/bash
+  testFiles=$(ls test*)
+  for file in $testFiles
+  do
+    count <$file >myOut 2>myErr
+    echo $? >>myOut
+    exCount <$file >exOut 2>exErr
+    echo $? >>exOut
+    echo Test File $file
+    echo stdout diffs:
+    diff myOut exOut
+    echo stderr diffs:
+    diff myErr exErr
+  done
